@@ -1,5 +1,9 @@
-<h1> Create New Post </h1>
+<% if user_signed_in? %>
+    <h1> Create New Post </h1>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to 'Back', posts_path %>
+    <%= link_to 'Back', posts_path %>
+<% else %>
+    <p> You can't add a post. SigIn/SignUp first. </p>
+<% end %>
